@@ -1,0 +1,253 @@
+[2022-10-04 22:08:27 INFO] Creating 3 channels
+[2022-10-04 22:08:27 INFO] Max TTL: 84600
+[2022-10-04 22:08:27 INFO] Save: true
+[2022-10-04 22:08:27 INFO] Server IP: 127.0.0.1
+[2022-10-04 22:08:27 INFO] Server Port: 3239
+[2022-10-04 22:08:27 INFO] Loglevel: debug
+[2022-10-04 22:08:27 INFO] Log use file: true
+[2022-10-04 22:08:27 INFO] Path to logfile: .\logs\extracache.log
+[2022-10-04 22:08:27 INFO] Listening on 127.0.0.1:3239
+[2022-10-05 07:38:03 INFO] Creating 3 channels
+[2022-10-05 07:38:03 INFO] Max TTL: 84600
+[2022-10-05 07:38:03 INFO] Save: true
+[2022-10-05 07:38:03 INFO] Server IP: 127.0.0.1
+[2022-10-05 07:38:03 INFO] Server Port: 3239
+[2022-10-05 07:38:03 INFO] Loglevel: debug
+[2022-10-05 07:38:03 INFO] Log use file: true
+[2022-10-05 07:38:03 INFO] Path to logfile: .\logs\extracache.log
+[2022-10-05 07:38:03 TEST] Cache_List Test_GetCache Finished
+[2022-10-05 07:38:03 TEST] Cache_List Test_SetCache Finished
+[2022-10-05 07:38:03 TEST] Cache_List Test_DeleteCache Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 TEST] Cache_List Test_SetItemInCache Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 TEST] Cache_List Test_GetItemFromCache Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 WARNING] Deleting key: key
+[2022-10-05 07:38:03 TEST] Cache_List Test_DeleteItemFromCache Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Getting size of cache: 1
+[2022-10-05 07:38:03 INFO] Getting size of cache: 3
+[2022-10-05 07:38:03 INFO] Getting size of cache: 4
+[2022-10-05 07:38:03 INFO] Getting size of cache: 5
+[2022-10-05 07:38:03 INFO] Getting size of cache: 0
+[2022-10-05 07:38:03 INFO] Getting size of cache: 6
+[2022-10-05 07:38:03 INFO] Getting size of cache: 7
+[2022-10-05 07:38:03 INFO] Getting size of cache: 8
+[2022-10-05 07:38:03 INFO] Getting size of cache: 9
+[2022-10-05 07:38:03 INFO] Getting size of cache: 2
+[2022-10-05 07:38:03 TEST] Cache_List Test_GetCacheSize Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 8
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 2
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 3
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 6
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 5
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 7
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 9
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 0
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 4
+[2022-10-05 07:38:03 TEST] Cache_List Test_CacheHasKey Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 7
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 9
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 0
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 2
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 3
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 6
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 8
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 1
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 4
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 5
+[2022-10-05 07:38:03 TEST] Cache_List Test_GetCacheKeys Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Getting size of cache: 2
+[2022-10-05 07:38:03 INFO] Getting size of cache: 5
+[2022-10-05 07:38:03 INFO] Getting size of cache: 6
+[2022-10-05 07:38:03 INFO] Getting size of cache: 7
+[2022-10-05 07:38:03 INFO] Getting size of cache: 8
+[2022-10-05 07:38:03 INFO] Getting size of cache: 9
+[2022-10-05 07:38:03 INFO] Getting size of cache: 0
+[2022-10-05 07:38:03 INFO] Getting size of cache: 1
+[2022-10-05 07:38:03 INFO] Getting size of cache: 3
+[2022-10-05 07:38:03 INFO] Getting size of cache: 4
+[2022-10-05 07:38:03 TEST] Cache_List Test_GetCacheSizeAll Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 0
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 7
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 9
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 1
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 2
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 3
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 4
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 5
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 6
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 8
+[2022-10-05 07:38:03 TEST] Cache_List Test_GetCacheKeysAll Finished
+[2022-10-05 07:38:03 INFO] Listening on 127.0.0.1:3882
+[2022-10-05 07:38:03 TEST] SOCKET Test_Listen Finished
+[2022-10-05 07:38:03 INFO] Accepted connection from 127.0.0.1:50319
+[2022-10-05 07:38:03 ERROR] Error reading from connection: EOF
+[2022-10-05 07:38:03 INFO] Accepted connection from 127.0.0.1:50320
+[2022-10-05 07:38:03 TEST] SOCKET Test_HandleConnection Finished
+[2022-10-05 07:38:03 ERROR] Error reading from connection: EOF
+[2022-10-05 07:38:03 INFO] Received message from socket: SET
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 TEST] SOCKET Test_ParseRequest Finished
+[2022-10-05 07:38:03 INFO] Setting key: key0
+[2022-10-05 07:38:03 INFO] Setting key: key1
+[2022-10-05 07:38:03 INFO] Setting key: key2
+[2022-10-05 07:38:03 INFO] Setting key: key3
+[2022-10-05 07:38:03 INFO] Setting key: key4
+[2022-10-05 07:38:03 INFO] Setting key: key5
+[2022-10-05 07:38:03 INFO] Setting key: key6
+[2022-10-05 07:38:03 INFO] Setting key: key7
+[2022-10-05 07:38:03 INFO] Setting key: key8
+[2022-10-05 07:38:03 INFO] Setting key: key9
+[2022-10-05 07:38:03 TEST] Cache Test_Set Finished
+[2022-10-05 07:38:03 INFO] Getting key: key0
+[2022-10-05 07:38:03 INFO] Getting key: key1
+[2022-10-05 07:38:03 INFO] Getting key: key2
+[2022-10-05 07:38:03 INFO] Getting key: key3
+[2022-10-05 07:38:03 INFO] Getting key: key4
+[2022-10-05 07:38:03 INFO] Getting key: key5
+[2022-10-05 07:38:03 INFO] Getting key: key6
+[2022-10-05 07:38:03 INFO] Getting key: key7
+[2022-10-05 07:38:03 INFO] Getting key: key8
+[2022-10-05 07:38:03 INFO] Getting key: key9
+[2022-10-05 07:38:03 WARNING] Deleting all keys from cache: 1
+[2022-10-05 07:38:03 INFO] Getting key: key
+[2022-10-05 07:38:03 TEST] Cache Test_Get Finished
+[2022-10-05 07:38:03 WARNING] Deleting key: key0
+[2022-10-05 07:38:03 WARNING] Deleting key: key1
+[2022-10-05 07:38:03 WARNING] Deleting key: key2
+[2022-10-05 07:38:03 WARNING] Deleting key: key3
+[2022-10-05 07:38:03 WARNING] Deleting key: key4
+[2022-10-05 07:38:03 WARNING] Deleting key: key5
+[2022-10-05 07:38:03 WARNING] Deleting key: key6
+[2022-10-05 07:38:03 WARNING] Deleting key: key7
+[2022-10-05 07:38:03 WARNING] Deleting key: key8
+[2022-10-05 07:38:03 WARNING] Deleting key: key9
+[2022-10-05 07:38:03 TEST] Cache Test_Delete Finished
+[2022-10-05 07:38:03 WARNING] Deleting all keys from cache: 1
+[2022-10-05 07:38:03 TEST] Cache Test_DeleteAll Finished
+[2022-10-05 07:38:03 INFO] Getting size of cache: 1
+[2022-10-05 07:38:03 TEST] Cache Test_GetSize Finished
+[2022-10-05 07:38:03 INFO] Getting keys from cache: 1
+[2022-10-05 07:38:03 TEST] Cache Test_GetKeys Finished
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 INFO] Checking if key exists in cache: 1
+[2022-10-05 07:38:03 TEST] Cache Test_HasKey Finished
+[2022-10-05 07:38:03 INFO] Setting key: key
+[2022-10-05 07:38:03 INFO] Getting item TTL from cache: 1
+[2022-10-05 07:38:03 TEST] Cache Test_ItemTTL Finished

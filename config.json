@@ -1,0 +1,16 @@
+{
+ "cache_channels":3,
+ "cache_max_ttl":84600,
+ "cache_save":true,
+ "server":{
+  "addr":"127.0.0.1",
+  "port":3239
+ },
+ "logger":{
+  "level":"debug",
+  "use_file":true,
+  "path":".\\logs",
+  "filename":"extracache.log",
+  "max_lines":1000
+ }
+}
