@@ -7,7 +7,6 @@ import (
 	"net"
 	"strconv"
 	"strings"
-	"unsafe"
 )
 
 type Message struct {
@@ -50,9 +49,9 @@ func (s *Server) Listen() {
 func HandleConnection(conn net.Conn) {
 	defer conn.Close()
 
-	bs := unsafe.Sizeof(CACHE_LIST)
-	bufsize := strconv.Itoa(int(bs))
-	conn.Write([]byte("$$BUFSIZE____$$" + bufsize))
+	// bs := unsafe.Sizeof(CACHE_LIST)
+	// bufsize := strconv.Itoa(int(bs))
+	// conn.Write([]byte("$$BUFSIZE____$$" + bufsize))
 
 	for {
 		buf := make([]byte, 8192)
