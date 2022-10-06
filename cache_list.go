@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/gob"
 	"errors"
+	"fmt"
 	"os"
 	"time"
 )
@@ -19,7 +20,7 @@ type SavedItem struct {
 }
 
 type SaveList struct {
-	Saves map[int]*SavedItem
+	Saves map[int][]SavedItem
 }
 
 // Get a cache
@@ -95,33 +96,42 @@ func (c *CacheList) GetCacheKeysAll() []string {
 }
 
 func (c *CacheList) SaveCaches() {
-	data := SaveList{Saves: make(map[int]*SavedItem)}
+	data := SaveList{Saves: make(map[int][]SavedItem)}
 	for _, cache := range c.Caches {
-		for key, item := range cache.Data {
-			nowtime := int(time.Now().Unix())
-			data.Saves[cache.Channel_ID] = &SavedItem{Key: key, Data: item.Value, TIME_SAVED: nowtime, TTL: item.TTL}
+		if cache.GetSize() > 0 {
+			for key, item := range cache.Data {
+				nowtime := int(time.Now().Unix())
+				data.Saves[cache.Channel_ID] = append(data.Saves[cache.Channel_ID], SavedItem{Key: key, Data: item.Value, TIME_SAVED: nowtime, TTL: item.TTL})
+			}
 		}
 	}
-	data.Save("cache.extra")
+	data.Save(CONF.SAVE_FILE_NAME)
 }
 
 func (c *CacheList) LoadCaches() {
-	data := SaveList{Saves: make(map[int]*SavedItem)}
-	data.Load("cache.extra")
+	data := SaveList{Saves: make(map[int][]SavedItem)}
+	data.Load(CONF.SAVE_FILE_NAME)
 	for key, item := range data.Saves {
-		nowtime := int(time.Now().Unix())
-		ttl := item.TTL - (nowtime - item.TIME_SAVED)
-		if ttl > 0 {
-			c.SetItemInCache(key, item.Key, item.Data, ttl)
+		for _, item := range item {
+			// go func(key int, item *SavedItem) {
+			LOGGER.Info(fmt.Sprintf("Loading cache for channel %d", key))
+			nowtime := int(time.Now().Unix())
+			ttl := item.TTL - (nowtime - item.TIME_SAVED)
+			if ttl > 0 {
+				c.SetItemInCache(key, item.Key, item.Data, ttl)
+			} else {
+				LOGGER.Info(fmt.Sprintf("Cache for channel %d has expired", key))
+			}
+			// }(key, item)
 		}
 	}
-	os.Remove("cache.extra")
+	os.Remove(CONF.SAVE_FILE_NAME)
 }
 
 func (sl *SaveList) Save(filename string) error {
 	file, err := os.Create(filename)
 	if err != nil {
-		err = errors.New("An error has occurred trying to save the cache to disk." + err.Error())
+		err = errors.New("An error has occurred trying to create the file to save to disk." + err.Error())
 		LOGGER.Error(err.Error())
 		return err
 	}

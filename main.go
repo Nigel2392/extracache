@@ -53,15 +53,16 @@ func init() {
 
 	// Parse config
 	ParseConfig()
-	// Print logo
-	PrintLogo()
-	// Print config
-	PrintOptions()
 	// Check if cache items should expire.
 	go CacheWatcher()
 }
 
 func main() {
+	// Print logo
+	PrintLogo()
+	// Print config
+	PrintOptions()
+
 	if len(os.Args) > 1 {
 		LOGGER.Error("This program doesn't take any arguments.")
 	}
@@ -73,8 +74,14 @@ func main() {
 	}
 
 	if CONF.CACHE_SAVE {
+		time.Sleep(100 * time.Millisecond)
 		// Load cache from file
+		LOGGER.Info("Loading cache from file...")
 		CACHE_LIST.LoadCaches()
+		LOGGER.Info("Cache loaded. Set " + strconv.Itoa(CACHE_LIST.GetCacheSizeAll()) + " items in cache.")
+		for _, cache := range CACHE_LIST.Caches {
+			LOGGER.Info("Cache " + strconv.Itoa(cache.Channel_ID) + " has " + strconv.Itoa(cache.GetSize()) + " items.")
+		}
 	}
 
 	sigs := make(chan os.Signal, 1)

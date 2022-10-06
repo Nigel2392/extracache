@@ -11,6 +11,7 @@ type Config struct {
 	CACHE_CHANNELS int                 `json:"cache_channels"`
 	CACHE_MAX_TTL  int                 `json:"cache_max_ttl"`
 	CACHE_SAVE     bool                `json:"cache_save"`
+	SAVE_FILE_NAME string              `json:"save_file_name"`
 	SERVER         *Server             `json:"server"`
 	LOGGER         *extralogger.Logger `json:"logger"`
 }
@@ -28,6 +29,7 @@ func ParseConfig() {
  "cache_channels":3,
  "cache_max_ttl":84600,
  "cache_save":true,
+ "save_file_name":"LAST_CACHE",
  "server":{
   "addr":"127.0.0.1",
   "port":3239
