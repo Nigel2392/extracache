@@ -136,6 +136,38 @@ func ParseRequest(msg Message) map[string]interface{} {
 		data_to_json["CHANNEL"] = msg.Channel_ID
 		data_to_json["STATUS"] = "OK"
 
+	case "KEYSALL":
+		LOGGER.Info("Received message from socket: " + msg.Type)
+		// fmt.Println(msg.Type)
+		data_to_json["DATA"] = map[string]any{"KEYS_ALL": CACHE_LIST.GetCacheKeysAll()}
+		data_to_json["STATUS"] = "OK"
+
+	case "CLEAR":
+		LOGGER.Info("Received message from socket: " + msg.Type)
+		// fmt.Println(msg.Type)
+		CACHE_LIST.GetCache(msg.Channel_ID).DeleteAll()
+		data_to_json["DATA"] = map[string]any{"CHANNEL": msg.Channel_ID}
+		data_to_json["STATUS"] = "OK"
+
+	case "TTL_ALL":
+		LOGGER.Info("Received message from socket: " + msg.Type)
+		// fmt.Println(msg.Type)
+		ttl := CACHE_LIST.GetCache(msg.Channel_ID).TTL_List()
+		data_to_json["DATA"] = map[string]any{"TTL": ttl}
+		data_to_json["CHANNEL"] = msg.Channel_ID
+		data_to_json["STATUS"] = "OK"
+
+	case "TTL":
+		LOGGER.Info("Received message from socket: " + msg.Type)
+		// fmt.Println(msg.Type)
+		ttl := CACHE_LIST.GetCache(msg.Channel_ID).ItemTTL(msg.Key)
+		data_to_json["DATA"] = map[string]any{"TTL": ttl}
+		data_to_json["CHANNEL"] = msg.Channel_ID
+		data_to_json["STATUS"] = "OK"
+		if ttl == -1 {
+			data_to_json["STATUS"] = "NOT_FOUND"
+		}
+
 	case "CONFIGURE":
 		LOGGER.Info("Received message from socket: " + msg.Type)
 		// fmt.Println(msg.Type)

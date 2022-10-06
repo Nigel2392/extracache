@@ -1,7 +1,25 @@
 package main
 
+import (
+	"encoding/gob"
+	"errors"
+	"os"
+	"time"
+)
+
 type CacheList struct {
 	Caches map[int]*Cache
+}
+
+type SavedItem struct {
+	Key        string
+	Data       interface{}
+	TIME_SAVED int
+	TTL        int
+}
+
+type SaveList struct {
+	Saves map[int]*SavedItem
 }
 
 // Get a cache
@@ -74,4 +92,64 @@ func (c *CacheList) GetCacheKeysAll() []string {
 		keys = append(keys, cache.GetKeys()...)
 	}
 	return keys
+}
+
+func (c *CacheList) SaveCaches() {
+	data := SaveList{Saves: make(map[int]*SavedItem)}
+	for _, cache := range c.Caches {
+		for key, item := range cache.Data {
+			nowtime := int(time.Now().Unix())
+			data.Saves[cache.Channel_ID] = &SavedItem{Key: key, Data: item.Value, TIME_SAVED: nowtime, TTL: item.TTL}
+		}
+	}
+	data.Save("cache.extra")
+}
+
+func (c *CacheList) LoadCaches() {
+	data := SaveList{Saves: make(map[int]*SavedItem)}
+	data.Load("cache.extra")
+	for key, item := range data.Saves {
+		nowtime := int(time.Now().Unix())
+		ttl := item.TTL - (nowtime - item.TIME_SAVED)
+		if ttl > 0 {
+			c.SetItemInCache(key, item.Key, item.Data, ttl)
+		}
+	}
+	os.Remove("cache.extra")
+}
+
+func (sl *SaveList) Save(filename string) error {
+	file, err := os.Create(filename)
+	if err != nil {
+		err = errors.New("An error has occurred trying to save the cache to disk." + err.Error())
+		LOGGER.Error(err.Error())
+		return err
+	}
+	defer file.Close()
+	enc := gob.NewEncoder(file)
+	err = enc.Encode(sl)
+	if err != nil {
+		err = errors.New("An error has occurred trying to save the cache to disk." + err.Error())
+		LOGGER.Error(err.Error())
+		return err
+	}
+	return nil
+}
+
+func (sl *SaveList) Load(filename string) error {
+	file, err := os.Open(filename)
+	if err != nil {
+		err = errors.New("An error has occurred trying to load the cache from disk." + err.Error())
+		LOGGER.Error(err.Error())
+		return err
+	}
+	defer file.Close()
+	dec := gob.NewDecoder(file)
+	err = dec.Decode(sl)
+	if err != nil {
+		err = errors.New("An error has occurred trying to load the cache from disk." + err.Error())
+		LOGGER.Error(err.Error())
+		return err
+	}
+	return nil
 }

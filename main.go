@@ -5,8 +5,10 @@ import (
 	"ExtraCache/typeutils"
 	"fmt"
 	"os"
+	"os/signal"
 	"strconv"
 	"sync"
+	"syscall"
 	"time"
 
 	"github.com/TwiN/go-color"
@@ -70,7 +72,25 @@ func main() {
 		CACHE_LIST.Caches[i] = &Cache
 	}
 
+	if CONF.CACHE_SAVE {
+		// Load cache from file
+		CACHE_LIST.LoadCaches()
+	}
+
+	sigs := make(chan os.Signal, 1)
+	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+	go func() {
+		<-sigs
+		Terminate()
+		os.Exit(0)
+	}()
 	SERVER.Listen()
+}
+
+func Terminate() {
+	if CONF.CACHE_SAVE {
+		CACHE_LIST.SaveCaches()
+	}
 }
 
 func PrintLogo() {
